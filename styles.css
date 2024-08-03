@@ -1,0 +1,566 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode, header.dark-mode, footer.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px;
+  padding-bottom: 0%;
+  /* background-color: #fff; */
+  transition: background-color 0.3s;
+}
+
+/* header.dark-mode {
+  background-color: #121212;
+} */
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+  padding: 50px;
+}
+
+footer {
+  /* background-color: #333; */
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  background: linear-gradient(to right, #ed0808, #29a8e8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* This makes the text transparent, showing only the background */
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  display: block;
+  --width-of-switch: 3.5em;
+  --height-of-switch: 2em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.3em;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+  margin-right: auto !important;
+  margin-left: 3.5%;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f4f5;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon,1.4em);
+  width: var(--size-of-icon,1.4em);
+  border-radius: 20px;
+  left: var(--slider-offset,0.3em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #303136;
+}
+
+input:checked + .slider:before {
+  left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+  background: #303136;
+  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
+
+
+input:checked + label::after {
+  transform: translateX(20px);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 180px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  /* margin-left: 30px; */
+}
+
+nav ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+body.dark-mode nav ul li a::after {
+  background: #fff;
+}
+
+.intro {
+
+  padding:40px;
+
+}
+.intro h1 {
+  font-size: 5em;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.intro span {
+  font-size: 1em;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.intro h2 a {
+  /* Example styles */
+  background: linear-gradient(to right, #ee7919, #f816cb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* This makes the text transparent, showing only the background */
+  text-decoration: none; /* Remove underline */
+}
+
+h2 {
+  background: linear-gradient(to right, #4b5055, #080909);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* This makes the text transparent, showing only the background */
+  text-decoration: none; /* Remove underline */
+}
+body.dark-mode .intro h2 a {
+  background: linear-gradient(to right, #c570ef, #5cb5f9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* This makes the text transparent, showing only the background */
+  text-decoration: none; /* Remove underline */
+}
+
+.intro h3 {
+  background: linear-gradient(to right, #7f878e, #889494);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* This makes the text transparent, showing only the background */
+  text-decoration: none; /* Remove underline */
+}
+
+.intro h3 a {
+  /* Example styles */
+  background: linear-gradient(to right, #ee7919, #f816cb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* This makes the text transparent, showing only the background */
+  text-decoration: none; /* Remove underline */
+}
+
+
+body.dark-mode .intro h3 a {
+  /* Example styles */
+  background: linear-gradient(to right, #198bee, #0f4167);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* This makes the text transparent, showing only the background */
+  text-decoration: none; /* Remove underline */
+}
+
+
+body.dark-mode .intro span {
+  color: #555;
+}
+
+
+body.dark-mode .intro h2 {
+  color: #e4d0d0;
+  
+}
+
+
+
+.details {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.details div {
+  text-align: left;
+}
+
+.details h2 {
+  font-size: 1.2em;
+}
+
+
+
+.intro h1 span {
+  font-size: 1em; /* Adjust size as needed */
+  background: linear-gradient(to right, #e38f09, #8c1c1c); /* black to grey gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* This makes the text transparent, showing only the background */
+  display: inline; /* This might be necessary to ensure the gradient applies correctly */
+}
+
+
+body.dark-mode .intro h1 span {
+  font-size: 1em; /* Adjust size as needed */
+  background: linear-gradient(to right, #084ded, #08ccee); /* black to grey gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* This makes the text transparent, showing only the background */
+  display: inline; /* This might be necessary to ensure the gradient applies correctly */
+}
+
+
+
+.photo-box {
+    width: 400px;       /* Adjust the size as needed */
+    height: 400px;      /* Make it a square */
+    border-radius: 20px; /* Rounded corners */
+    overflow: hidden;   /* Ensures no overflow from the content inside */
+    position: fixed;    /* Keeps the box in a fixed position */
+    right: 20px;        /* Distance from the right side of the viewport */
+    top: 50%;           /* Position it vertically in the middle */
+    transform: translateY(-50%); /* Center it vertically */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds shadow for better visibility */
+    display: flex;      /* Use flexbox to center the image inside */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: white; /* Background color of the box */
+    margin-right: 5%;
+}
+
+
+
+.photo-box img {
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+  width: 100%;    /* Fill the container */
+  height: 150%;   /* Fill the container */
+  object-fit: cover; /* Ensure the image covers the box */
+}
+
+.photo-box:hover img {
+  transform: scale(1.1); /* Scale up the image by 10% on hover */
+}
+
+
+.logo {
+  width: 20.4px;
+  height: 20.4px;
+  --clr: rgb(202, 111, 42);
+  --clr-alpha: rgb(247, 197, 159,.1);
+  animation: spinner 2.6s infinite ease;
+  transform-style: preserve-3d;
+}
+
+.logo > div {
+  background-color: var(--clr-alpha);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  border: 3.5px solid var(--clr);
+}
+
+.logo div:nth-of-type(1) {
+  transform: translateZ(-15px) rotateY(180deg);
+}
+
+.logo div:nth-of-type(2) {
+  transform: rotateY(-270deg) translateX(50%);
+  transform-origin: top right;
+}
+
+.logo div:nth-of-type(3) {
+  transform: rotateY(270deg) translateX(-50%);
+  transform-origin: center left;
+}
+
+.logo div:nth-of-type(4) {
+  transform: rotateX(90deg) translateY(-50%);
+  transform-origin: top center;
+}
+
+.logo div:nth-of-type(5) {
+  transform: rotateX(-90deg) translateY(50%);
+  transform-origin: bottom center;
+}
+
+.logo div:nth-of-type(6) {
+  transform: translateZ(15px);
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+  }
+
+  50% {
+    transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+  }
+
+  100% {
+    transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+  }
+}
+
+
+.calendly-inline-widget {
+  min-width:700px;
+  height:450px;
+  padding: 0px 20px;
+  border-radius: 35%;
+}
+
+
+.tech_img {
+  height: 45px;
+  width: 45px;
+  display: block;
+}
+
+
+@media (max-width: 1190px) {
+
+  .calendly-inline-widget {
+    min-width: 520px; /* Adjusted width */
+    height: 400px; /* Adjusted height */
+    /* padding: 0px 10px; Adjusted padding */
+    border-radius: 35%;
+  }
+
+  nav ul {
+    gap: 100px; /* Reduced gap between navigation items */
+  }
+
+
+  .elfsight-app-13394382-a3bb-41c4-ae42-325873ca93ea {
+
+    width: 75%;
+    height: 100%;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 1030px) {
+
+  .calendly-inline-widget {
+    min-width: 320px; /* Adjusted width */
+    height: 500px; /* Adjusted height */
+    /* padding: 0px 10px; Adjusted padding */
+    border-radius: 35%;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 860px) {
+  nav ul {
+    gap: 50px; /* Reduced gap between navigation items */
+  }
+
+  main {
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center ;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 790px) {
+  .calendly-inline-widget {
+    width: 100%; /* Adjust width to take full container width */
+    height: auto; /* Adjust height as necessary */
+    order: 1; /* Ensures it moves to the line it needs to be on if using flexbox */
+    /* padding: 10px 0; Adjust padding as needed */
+
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  /* If main is using flexbox and you want the widget to break onto the next line */
+
+}
+
+@media (max-width: 700px) {
+  nav ul {
+    gap: 20px; /* Reduced gap between navigation items */
+  }
+  .hamburger {
+    display: none;
+  }
+}
+
+
+
+.hamburger {
+  height: 50px;
+  width: 50px;
+  transform: 0.2s;
+  position: relative;
+}
+.hamburger .checkbox {
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+.line {
+  transition: 0.5s;
+  stroke-width: 6px;
+  stroke: black;
+}
+.lineTop {
+  stroke-dasharray: 40 40;
+  stroke-dashoffset: 25;
+}
+.lineBottom {
+  stroke-dasharray: 40 40;
+  stroke-dashoffset: 60;
+}
+.lineMid {
+  stroke-dasharray: 40 40;
+}
+.hamburger .checkbox:checked + svg .line {
+  stroke: crimson;
+}
+.hamburger .checkbox:checked + svg .lineTop {
+  stroke-dashoffset: 0;
+  transform-origin: left;
+  transform: rotateZ(45deg) translate(-7px, -5px);
+}
+.hamburger .checkbox:checked + svg .lineMid {
+  stroke-dashoffset: 40;
+}
+.hamburger .checkbox:checked + svg .lineBottom {
+  stroke-dashoffset: 0;
+  transform-origin: left;
+  transform: rotateZ(-45deg) translate(-5px, 5px);
+}
+
+.hamburger {
+  display: none;
+}
+
+
+@media (max-width: 625px) {
+  nav ul {
+    display: none; /* Reduced gap between navigation items */
+  }
+
+  .hamburger {
+    display: block;
+
+  }
+  
+  header {
+    padding: 50px;
+  }
+
+  .switch {
+    margin-left: 10%;
+  }
+}
+
+
+@media (max-width: 625px) {
+  nav ul {
+    width: 50%; 
+    background: #fff;
+    position: absolute;
+    top: 60px; 
+    left: 0;
+    z-index: 1000;
+    display: none; 
+    margin-top: 50px;
+    padding-left: 50%;
+  }
+
+  nav ul li {
+    text-align: center; 
+    width: 50%; 
+    right: 0;
+    
+  }
+}
