@@ -11,6 +11,7 @@ html, body {
 body.dark-mode, header.dark-mode, footer.dark-mode {
   background-color: #121212;
   color: #ffffff;
+
 }
 
 body {
@@ -169,6 +170,10 @@ body.dark-mode nav ul li a::after {
   padding:40px;
 
 }
+
+
+
+
 .intro h1 {
   font-size: 5em;
   font-weight: bold;
@@ -389,87 +394,6 @@ body.dark-mode .intro h1 span {
 }
 
 
-@media (max-width: 1190px) {
-
-  .calendly-inline-widget {
-    min-width: 520px; /* Adjusted width */
-    height: 400px; /* Adjusted height */
-    /* padding: 0px 10px; Adjusted padding */
-    border-radius: 35%;
-  }
-
-  nav ul {
-    gap: 100px; /* Reduced gap between navigation items */
-  }
-
-
-  .elfsight-app-13394382-a3bb-41c4-ae42-325873ca93ea {
-
-    width: 75%;
-    height: 100%;
-  }
-
-  .hamburger {
-    display: none;
-  }
-}
-
-@media (max-width: 1030px) {
-
-  .calendly-inline-widget {
-    min-width: 320px; /* Adjusted width */
-    height: 500px; /* Adjusted height */
-    /* padding: 0px 10px; Adjusted padding */
-    border-radius: 35%;
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-}
-
-
-@media (max-width: 860px) {
-  nav ul {
-    gap: 50px; /* Reduced gap between navigation items */
-  }
-
-  main {
-    flex-wrap: wrap; /* Allow items to wrap */
-    justify-content: center ;
-  }
-
-  .hamburger {
-    display: none;
-  }
-}
-
-@media (max-width: 790px) {
-  .calendly-inline-widget {
-    width: 100%; /* Adjust width to take full container width */
-    height: auto; /* Adjust height as necessary */
-    order: 1; /* Ensures it moves to the line it needs to be on if using flexbox */
-    /* padding: 10px 0; Adjust padding as needed */
-
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-  /* If main is using flexbox and you want the widget to break onto the next line */
-
-}
-
-@media (max-width: 700px) {
-  nav ul {
-    gap: 20px; /* Reduced gap between navigation items */
-  }
-  .hamburger {
-    display: none;
-  }
-}
 
 
 
@@ -523,6 +447,96 @@ body.dark-mode .intro h1 span {
   display: none;
 }
 
+header.dark-mode .line {
+    stroke: #fff;
+}
+
+@media (max-width: 1190px) {
+
+  .calendly-inline-widget {
+    min-width: 520px; /* Adjusted width */
+    height: 400px; /* Adjusted height */
+    /* padding: 0px 10px; Adjusted padding */
+    border-radius: 35%;
+  }
+
+  nav ul {
+    gap: 100px; /* Reduced gap between navigation items */
+  }
+
+
+  .elfsight-app-13394382-a3bb-41c4-ae42-325873ca93ea {
+
+    width: 75%;
+    height: 100%;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  
+}
+
+@media (max-width: 1030px) {
+
+  .calendly-inline-widget {
+    min-width: 320px; /* Adjusted width */
+    height: 500px; /* Adjusted height */
+    /* padding: 0px 10px; Adjusted padding */
+    border-radius: 35%;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 860px) {
+  nav ul {
+    gap: 50px; /* Reduced gap between navigation items */
+  }
+
+  main {
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center ;
+  }
+
+  .hamburger {
+    display: none;
+  }
+  .calendly-inline-widget {
+    width: 600px;
+  }
+}
+
+@media (max-width: 790px) {
+
+  .hamburger {
+    display: none;
+  }
+
+  /* If main is using flexbox and you want the widget to break onto the next line */
+
+}
+
+@media (max-width: 700px) {
+  nav ul {
+    gap: 20px; /* Reduced gap between navigation items */
+  }
+  .hamburger {
+    display: none;
+  }
+
+  .intro{
+    padding: 0px 40px 0px 0px;
+  }
+}
+
+
+
 
 @media (max-width: 625px) {
   nav ul {
@@ -547,7 +561,6 @@ body.dark-mode .intro h1 span {
 @media (max-width: 625px) {
   nav ul {
     width: 50%; 
-    background: #fff;
     position: absolute;
     top: 60px; 
     left: 0;
@@ -563,4 +576,149 @@ body.dark-mode .intro h1 span {
     right: 0;
     
   }
+
+  .calendly-inline-widget {
+    height: auto;
+  }
+}
+
+
+
+/* ================================================================= Techstack.html */
+
+
+
+
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech_img {
+  display: flex;
+  justify-content: center; /* Distributes images evenly with space between */
+  align-items: center;
+  width: 100%;
+}
+
+.tech_img img {
+  margin: 0 65px; /* Small margin between images */
+  height: 60px; /* Resizes the icons */
+}
+
+.tech_img_3 {
+  display: flex;
+  justify-content: center; /* Ensures icons stay in the same row */
+  align-items: center;
+  width: 100%;
+}
+
+.tech_img_3 img {
+  margin: 0 50px; /* Small margin between images */
+  height: 60px; /* Resizes the icons */
+}
+
+/* Define dark mode styles */
+body.dark-mode .tech_img img[src="pandas-original-wordmark.svg"] {
+  filter: brightness(5); /* Lightens the image for dark mode */
+}
+
+body.dark-mode .tech_img img[src="tensorflow.svg"] {
+  filter: brightness(4);
+}
+
+body.dark-mode .tech_img img[src="pytorch.svg"] {
+  filter: brightness(3);
+}
+body.dark-mode .tech_img img[src="icons8-nodejs-48.png"] {
+  filter: brightness(2);
+}
+
+body.dark-mode .tech_img_3 img[src="netlify.svg"] {
+  filter: brightness(4);
+}
+
+body.dark-mode .tech_img_3 img[src="jupyter.svg"] {
+  filter: brightness(1.7);
+}
+
+
+/* ================================================================= about.html */
+
+@media (max-width: 1300px) {
+  .intro {
+      flex-direction: column; /* Stack text and image vertically */
+      max-width: 100%; /* Allow the text to take full width on small screens */
+  }
+
+  .photo-box {
+      margin-left: 0; /* Remove left margin to avoid excess spacing */
+      margin-top: 20px; /* Add spacing above the image */
+      height: 250px;
+      width: 300px;
+      border-radius: 20%;
+      right: 20px;        /* Distance from the right side of the viewport */
+      top: 35%;           /* Position it vertically in the middle */
+      left: 65%;
+      display: flex;      /* Use flexbox to center the image inside */
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      margin-right: 5%;
+    
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .intro {
+      flex-direction: column; /* Stack text and image vertically */
+      max-width: 100%; /* Allow the text to take full width on small screens */
+  }
+
+  .photo-box {
+    margin-left: 0; /* Remove left margin to avoid excess spacing */
+    margin-top: 20px; /* Add spacing above the image */
+    height: 175px;
+    width: 275px;
+    border-radius: 10%;
+    right: 20%;        /* Distance from the right side of the viewport */
+    left: 70%;
+    top: 35%;           /* Position it vertically in the middle */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-right: 5%;
+  }
+}
+
+
+@media (max-width: 1120px) {
+  .intro {
+      flex-direction: column; /* Stack text and image vertically */
+      max-width: 100%; /* Allow the text to take full width on small screens */
+  }
+  .photo-box {
+    display: none;      /* Use flexbox to center the image inside */
+  }
+}
+
+@media (max-width: 860px) {
+  .intro {
+      flex-direction: column; /* Stack text and image vertically */
+      max-width: 100%; /* Allow the text to take full width on small screens */
+  }
+  .photo-box {
+    display: none;      /* Use flexbox to center the image inside */
+  }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column; /* Stack text and image vertically */
+        max-width: 100%; /* Allow the text to take full width on small screens */
+    }
+    .photo-box {
+      display: none;      /* Use flexbox to center the image inside */
+    }
 }
