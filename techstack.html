@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animesh Mittal</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        main {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <!-- <video id="bg-video src="http:// -->
+
     <header>
-        <!-- <div class="logo">Hey,</div> -->
         <a href="index.html" class="logo">
             <div></div>
             <div></div>
@@ -22,52 +29,92 @@
         <label class="switch">
             <input type="checkbox" id="dark-mode-toggle">
             <span class="slider"></span>
-            <!-- <label for="dark-mode-toggle"></label> -->
         </label>
 
         <nav>
             <ul>
-                <!-- <li><a href="https://github.com/animeshm19?tab=repositories" target="_blank">Work</a></li> -->
-                <!-- <li><a href="https://www.linkedin.com/in/animeshmittal" target="_blank">LinkedIn</a></li> -->
-                <!-- <li><a href="about.html">About</a></li> -->
-
-                <li>
-                    <a href="https://github.com/animeshm19?tab=repositories" target="_blank">Work</a>
-                </li>
-
-                <li>
-                    <a href="https://www.linkedin.com/in/animeshmittal" target="_blank">LinkedIn</a>
-                </li>
-
-                <li>
-                    <a href="techstack.html" target="_blank">Tech Stack</a>
-                </li>
-                
-                <li>
-                    <a href="about.html" target="_blank">About</a>
-                </li>
+                <li><a href="https://github.com/animeshm19?tab=repositories" target="_blank">Work</a></li>
+                <li><a href="https://www.linkedin.com/in/animeshmittal" target="_blank">LinkedIn</a></li>
+                <li><a href="techstack.html" target="_blank">Tech Stack</a></li>
+                <li><a href="about.html" target="_blank">About</a></li>
             </ul>
+            <div class="hamburger">
+                <input class="checkbox" type="checkbox" />
+                <svg fill="none" viewBox="0 0 50 50" height="50" width="50">
+                <path
+                    class="lineTop line"
+                    stroke-linecap="round"
+                    stroke-width="4"
+                    stroke="black"
+                    d="M6 11L44 11"
+                ></path>
+                <path
+                    stroke-linecap="round"
+                    stroke-width="4"
+                    stroke="black"
+                    d="M6 24H43"
+                    class="lineMid line"
+                ></path>
+                <path
+                    stroke-linecap="round"
+                    stroke-width="4"
+                    stroke="black"
+                    d="M6 37H43"
+                    class="lineBottom line"
+                ></path>
+                
+                </svg>
+                
+            </div>
         </nav>
     </header>
 
     <main>
-        <div class="tech_img">
-            <img src="icons8-c-plus-plus-64.png" alt=""> <br>
+        <div class="row">
 
-            <img src="icons8-js-64.png" alt=""> <br>
-    
-            <img src="icons8-mongo-db-48.png" alt=""> <br>
-    
-            <img src="icons8-nodejs-48.png" alt=""> <br>
-    
-            <!-- <img src="icons8-python-1500.png" alt=""> <br> -->
-    
-            <img src="icons8-sql-48.png" alt=""> <br>
-    
-            <img src="icons8-swift.svg" alt=""> <br>
+            <div class="tech_img">
 
+                <img src="python.svg" alt="">
+                <img src="icons8-c-plus-plus-64.png" alt="">
+                <img src="html5.svg" alt="">
+                <img src="icons8-js-64.png" alt="">
+                <img src="julia.svg" alt="">
+                <img src="icons8-sql-48.png" alt="">
+                <img src="icons8-mongo-db-48.png" alt="">
+                <img src="icons8-swift.svg" alt="">
+                
+            </div>
         </div>
-        
+
+        <div class="row">
+            <div class="tech_img">
+                <img src="pytorch.svg" alt="">
+                <img src="pandas-original-wordmark.svg" alt="">
+                <img src="opencv.svg" alt="">
+                <img src="tensorflow.svg" alt="">
+                <img src="icons8-nodejs-48.png" alt="">
+                <img src="vuejs.svg" alt="">
+                <img src="firebase.svg" alt="">
+
+                
+
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="tech_img_3">
+
+                <img src="streamlit.svg" alt="">
+                <img src="heroku.svg" alt="">
+                <img src="netlify.svg" alt="">
+                <img src="vscode.svg" alt="">
+                <img src="jupyter.svg" alt="">
+                <img src="figma.svg" alt="">
+
+            </div>
+        </div>
 
     </main>
 
@@ -75,7 +122,6 @@
         <p>&copy; 2024 Animesh Mittal</p>
     </footer>
 
-    
     <script src="script.js"></script>
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
